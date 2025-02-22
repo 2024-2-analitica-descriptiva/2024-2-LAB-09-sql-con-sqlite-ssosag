@@ -349,7 +349,7 @@ def test_13():
     result = pd.read_sql_query(query, conn).to_dict()
 
     # Round the results to 2 decimal places
-    result['avg(c12)'] = {k: round(v, 2) for k, v in result['avg(c12)'].items()}
+    result["avg(c12)"] = {k: round(v, 2) for k, v in result["avg(c12)"].items()}
 
     expected = {
         "K0": {0: "A", 1: "B", 2: "C", 3: "D", 4: "E"},
@@ -363,6 +363,7 @@ def test_13():
     }
     assert result == expected
 
+
 def test_14():
     """Test 14."""
     conn, _ = load_data()
@@ -371,7 +372,7 @@ def test_14():
     result = pd.read_sql_query(query, conn).to_dict()
 
     # Round the results to 2 decimal places
-    result['avg(c21)'] = {k: round(v, 2) for k, v in result['avg(c21)'].items()}
+    result["avg(c21)"] = {k: round(v, 2) for k, v in result["avg(c21)"].items()}
 
     expected = {
         "K0": {0: "A", 1: "B", 2: "C", 3: "D", 4: "E"},
